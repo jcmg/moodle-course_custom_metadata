@@ -429,7 +429,6 @@ function coursemetadata_validation($coursenew, $files) {
 //function profile_save_data($usernew) {
 function coursemetadata_save_data($coursenew) {
     global $CFG, $DB;
-	print_r($coursenew);
     if ($fields = $DB->get_records('coursemetadata_info_field')) {
         foreach ($fields as $field) {
             require_once($CFG->dirroot.'/course/coursemetadata/field/'.$field->datatype.'/field.class.php');
